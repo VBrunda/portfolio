@@ -13,14 +13,21 @@
 <body>
     <div id="header">
         <div class="container">
-            <nav>
+            <nav>                
+                <!-- <img src="images/sun.png" id="icon"> -->
                 <img src="images/logo.png" alt="" class="logo">
                 <ul id="side-menu">
                     <li><a href="#">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li>    <a href="#portfolio">Portfolio</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li>
+                        <label class="switch">
+                        <input type="checkbox" checked id="icon">
+                        <span class="slider round"></span>
+                      </label>
+                    </li>
                     <i class="material-icons" onclick="closeMenu()">close</i>
                 </ul>
                 <i class="material-icons" onclick="openMenu()">menu</i>
@@ -163,44 +170,8 @@
     <div class="copyright">
         <p>Copyright &copy; ABCD</p>
     </div>
-    <script>
-        var tabLinks = document.getElementsByClassName('tab-links');
-        var tabContents = document.getElementsByClassName('tab-contents');
 
-        function openTab(tabType) {
-            for (const tab of tabLinks) {
-                tab.classList.remove('active-link');
-            }
-            for (const tab of tabContents) {
-                tab.classList.remove('active-tab');
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabType).classList.add("active-tab");
-        }
-
-        var sideMenu = document.getElementById('side-menu');
-        function openMenu() {
-            sideMenu.style.right = "0";
-        }
-        function closeMenu() {
-            sideMenu.style.right = "-150px";
-        }
-
-        const scriptURL = 'link to google sheet';
-        const form = document.forms['submit-to-google-sheet']
-        const msg=document.getElementById('msg');
-        form.addEventListener('submit', e => {
-            e.preventDefault()
-            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(response => {msg.innerHTML="Message sent successfullly"
-                setTimeout(function(){
-                    msg.innerHTML='';
-                }, 5000)
-                form.reset();
-            })
-                .catch(error => console.error('Error!', error.message))
-        })
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
