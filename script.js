@@ -13,12 +13,12 @@ function openTab(tabType) {
     document.getElementById(tabType).classList.add("active-tab");
 }
 
-var sideMenu = document.getElementById('side-menu');
+var sideMenu = document.querySelector('.side-menu');
 function openMenu() {
-    sideMenu.style.right = "0";
+    sideMenu.style.display = "flex";
 }
 function closeMenu() {
-    sideMenu.style.right = "-150px";
+    sideMenu.style.display = "none";
 }
 
 // to add the contact form details to google sheet

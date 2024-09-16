@@ -14,24 +14,41 @@
 <body>
     <div id="header">
         <div class="container">
-            <nav>                
+            <nav>
                 <!-- <img src="images/sun.png" id="icon"> -->
-                <img src="images/logo.png" alt="" class="logo">
-                <ul id="side-menu">
+
+                <ul class="top-menu">
+                    <li><img src="images/logo.png" alt="" class="logo"></li>
+                    <li class="hideMenu"><a href="#">Home</a></li>
+                    <li class="hideMenu"><a href="#about">About</a></li>
+                    <li class="hideMenu"><a href="#services">Services</a></li>
+                    <li class="hideMenu"> <a href="#portfolio">Portfolio</a></li>
+                    <li class="hideMenu"><a href="#contact">Contact</a></li>
+                    <li class="hideMenu">
+                        <label class="switch">
+                            <input type="checkbox" checked id="icon">
+                            <span class="slider round"></span>
+                        </label>
+                    </li>
+                    <li class="menu"><i class="material-icons" onclick="openMenu()">menu</i></li>
+                </ul>
+
+                
+                <ul class="side-menu">                    
+                    <li><i class="material-icons" onclick="closeMenu()">close</i></li>
+                    <li>
+                        <label class="switch">
+                            <input type="checkbox" checked id="icon">
+                            <span class="slider round"></span>
+                        </label>
+                    </li>
                     <li><a href="#">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li>    <a href="#portfolio">Portfolio</a></li>
+                    <li> <a href="#portfolio">Portfolio</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li>
-                        <label class="switch">
-                        <input type="checkbox" checked id="icon">
-                        <span class="slider round"></span>
-                      </label>
-                    </li>
-                    <i class="material-icons" onclick="closeMenu()">close</i>
                 </ul>
-                <i class="material-icons" onclick="openMenu()">menu</i>
+
             </nav>
             <div class="header-text">
                 <p>Software Developer</p>
@@ -48,7 +65,8 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p> Engineer highly proficient in understanding business needs and translating them into service-based components.</p>
+                    <p> Engineer highly proficient in understanding business needs and translating them into
+                        service-based components.</p>
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
                         <p class="tab-links" onclick="openTab('experience')">Experience</p>
@@ -172,7 +190,7 @@
         <p>Copyright &copy; ABCD</p>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 
 </html>
